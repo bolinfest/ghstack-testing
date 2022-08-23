@@ -13,6 +13,10 @@ RUN apt-get -y install curl git
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 
+# Debugging: where am I?
+RUN pwd
+RUN ls
+
 # Create and populate a Yarn offline-mirror.
 RUN npm install --global yarn
 RUN yarn config set offline-mirror "$HOME/npm-packages-offline-cache"
