@@ -6,12 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/bolinfest/ghstack-testing/demo:latest
-      options: --user root
+      # options: --user root
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-      - name: pwd
-        run: pwd
+      - name: grant access
+        run: git config --global --add safe.directory "$PWD"
       - name: git log
         run: git log
       - name: Run something
