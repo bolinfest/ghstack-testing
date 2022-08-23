@@ -10,7 +10,7 @@ RUN apt-get -y install curl git
 
 # The default version of Node on Ubuntu 20.04 is v10,
 # so use a PPA to get a newer version
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 
 # Create and populate a Yarn offline-mirror.
