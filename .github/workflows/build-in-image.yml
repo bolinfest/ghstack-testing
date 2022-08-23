@@ -6,9 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/bolinfest/ghstack-testing/demo:latest
     steps:
-      # - name: Checkout Code
-      #   uses: actions/checkout@v3
-
+      - name: Checkout Code
+        uses: actions/checkout@v3
       - name: Run something
         run: echo $(uname -r)
       - name: Run node version
