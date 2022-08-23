@@ -17,6 +17,7 @@ RUN apt-get install -y nodejs
 RUN mkdir /root/node-project
 WORKDIR /root/node-project
 ADD yarn.lock /root/node-project
+ADD package.json /root/node-project
 RUN pwd
 RUN ls
 
