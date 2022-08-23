@@ -11,3 +11,5 @@ jobs:
 
       - name: Run something
         run: echo $(uname -r)
+      - name: Run node version
+        run: node --version
