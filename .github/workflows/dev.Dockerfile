@@ -14,6 +14,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 
 # Debugging: where am I?
+RUN mkdir /root/node-project
+WORKDIR /root/node-project
+ADD yarn.lock /root/node-project
 RUN pwd
 RUN ls
 
