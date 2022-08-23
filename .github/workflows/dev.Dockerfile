@@ -24,6 +24,5 @@ RUN ls
 # Create and populate a Yarn yarn-offline-mirror.
 RUN npm install --global yarn
 RUN yarn config set yarn-offline-mirror "$HOME/npm-packages-offline-cache"
-RUN mkdir $(yarn config get yarn-offline-mirror)
 RUN yarn install
 RUN find $(yarn config get yarn-offline-mirror)
