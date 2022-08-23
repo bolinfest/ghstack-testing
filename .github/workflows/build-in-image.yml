@@ -4,7 +4,9 @@ on: workflow_dispatch
 jobs:
   clone-and-build:
     runs-on: ubuntu-latest
-    container: ghcr.io/bolinfest/ghstack-testing/demo:latest
+    container:
+      image: ghcr.io/bolinfest/ghstack-testing/demo:latest
+      options: --user root
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
